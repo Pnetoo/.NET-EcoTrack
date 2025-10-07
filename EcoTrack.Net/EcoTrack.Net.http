@@ -1,0 +1,6 @@
+@EcoTrack.Net_HostAddress = http://localhost:5210
+
+GET {{EcoTrack.Net_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
