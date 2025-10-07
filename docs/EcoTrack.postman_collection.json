@@ -1,0 +1,60 @@
+{
+  "info": {
+    "name": "EcoTrack.Net API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_postman_id": "ecotrack-net-collection"
+  },
+  "item": [
+    {
+      "name": "Get All Products",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/Products"
+      }
+    },
+    {
+      "name": "Get Product by Id",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "{{baseUrl}}/api/Products/1"
+      }
+    },
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Achocolatado Eco\",\n  \"category\": \"Bebidas\",\n  \"caloriesPer100g\": 89.5,\n  \"co2PerUnit\": 0.42,\n  \"barcode\": \"7891000123456\"\n}"
+        },
+        "url": "{{baseUrl}}/api/Products"
+      }
+    },
+    {
+      "name": "Update Product",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"name\": \"Achocolatado Eco Light\",\n  \"category\": \"Bebidas\",\n  \"caloriesPer100g\": 75.0,\n  \"co2PerUnit\": 0.40,\n  \"barcode\": \"7891000123456\"\n}"
+        },
+        "url": "{{baseUrl}}/api/Products/1"
+      }
+    },
+    {
+      "name": "Delete Product",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": "{{baseUrl}}/api/Products/1"
+      }
+    }
+  ],
+  "variable": [
+    { "key": "baseUrl", "value": "http://localhost:5000" }
+  ]
+}
